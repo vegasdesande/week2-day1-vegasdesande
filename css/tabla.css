@@ -3,56 +3,61 @@
 /* ------------------------------------------ */
 
 /* Selecciona el elemento <body> */
-{
+body{
   font-family: sans-serif;
   text-align: center;
 }
 
 /* Selecciona el elemento <table> */
-{
+table{
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 3rem;
 }
 
 /* Selecciona las celdas de encabezado y las celdas de dato> */
-{
+th,td{
   position: relative;
   border: 1px solid #ddd;
   padding: .8rem .8rem;
 }
 
 /* Selecciona la segunda fila de la cabecera de tabla */
-{
+tr>th:nth-child(2n){
   background-color: antiquewhite;
 }
 
 /* Selecciona la sección (cuerpo) de la tabla  */
-{
+tbody{
   border-top: 10px solid #333;
   border-bottom: 10px solid #333;
 }
 
 /* Selecciona las celdas de encabezado de la sección de la tabla */
-{
+thead{
   padding-left: 2.5rem;
   text-align: left;
 }
 
 /* Selecciona una celda cada cinco empezando por la segunda. Quedan excluidas las celdas de la cabecera de tabla. */
-{
+tr td:nth-child(5n){
   background-color: rgb(220, 238, 255);
 }
 
 /* Seleccionar una de cada dos filas de la sección de tabla */
-{
+table .th,td:nth-child(odd){
   background-color: #f6f6f6;
 }
 
 /* La regla aplica al pseudo-elemento del elemento <th> en las siguientes condiciones:
     - Cuando el elemento <th> se encuentra en una sección de tabla.
     - Cuando el usuario pasa el ratón por encima del elemento <tr> padre */
-{
+table th:hover{
+  position: absolute;
+  left: .5rem;
+  content: " \0021AA";
+}
+tr:hover{
   position: absolute;
   left: .5rem;
   content: " \0021AA";
